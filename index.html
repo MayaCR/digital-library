@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Library</title>
+	</head>
+	<body>
+		<div class="container">
+		<div class="section sidebar">
+            <div class="header">Digital Library</div>
+			<form action="" method="post" id="add-book-form" novalidate>
+				<div class="form-input">
+					<label for="title">Title</label>
+					<input
+					type="text"
+					name="title"
+					id="title"
+					aria-describedby="error-msg-title"
+					required
+					/>
+					<span id="error-msg-title" class="error-msg">
+						Requires a title.
+					</span>
+				</div>
+				<div class="form-input">
+					<label for="author">Author</label>
+					<input
+					type="text"
+					name="author"
+					id="author"
+					aria-describedby="error-msg-author"
+					required
+					/>
+					<span id="error-msg-author" class="error-msg">
+						Requires an author.
+					</span>
+				</div>
+				<div class="form-input">
+					<label for="pages">Number of Pages</label>
+					<input
+					type="number"
+					name="pages"
+					id="pages"
+					aria-describedby="error-msg-pages"
+					min="1"
+					max="10000"
+					required
+					/>
+					<span id="error-msg-pages" class="error-msg">
+						Requires number between 1 and 10,000.
+					</span>
+				</div>
+				<div class="form-input">
+					<label for="read" class="toggle">Finished Reading?</label>
+					<input type="checkbox" name="read" id="read"/>
+					<span class="form-read-status">Not Read</span>
+				</div>
+				<div class="form-button">
+					<button class="add-book-btn" type="submit">Add Book</button>
+				</div>
+			</form>
+		</div>
+        <div class="section content">
+			<output for="add-book-form" class="display">
+				<!-- <div class="book-card">
+                    <p class="book-title">Book Title</p>
+                    <p class="book-author">Book Author</p>
+                    <p class="book-pages"># of Pages</p>
+                    <div class="card-btns">
+                        <div class="read-btn">
+							<input
+							type="checkbox"
+							name="read-status"
+							id="read-status"
+							role="toggle"
+                            />
+                            <label for="read-status">Read?</label>
+                        </div>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+				</div> -->
+			</output>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
