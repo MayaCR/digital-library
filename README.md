@@ -1,6 +1,6 @@
 # Digital Library
 
-![Alt Text](/images/mayacr_digital_library.png 'Digital Library')
+![Digital Library Image](/images/mayacr_digital_library.png)
 
 A digital library that allows the user to keep track of any books. The library keeps track of the books title, author, number of pages, and if the it has been read or not. In the future, the user will be able access books saved in local storage with the ablility to sort and search.
 
