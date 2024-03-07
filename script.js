@@ -1,17 +1,18 @@
 const bookInfoForm = document.querySelector('#add-book-form')
 const libraryDisplay = document.querySelector('output')
 const formReadButton = document.querySelector('#read')
-let formReadButtonStatus = document.querySelector('.form-read-status')
 
 const library = []
 
-function Book(title, author, pages, read) {
-	this.title = title
-	this.author = author
-	this.pages = pages
-	this.read = read
+class Book {
+	constructor(title, author, pages, read) {
+		this.title = title
+		this.author = author
+		this.pages = pages
+		this.read = read
+	}
 
-	this.getInfo = function () {
+	getInfo() {
 		return `${this.title} is by ${this.author}, has ${
 			this.pages
 		} pages, and ${this.read ? 'has' : "hasn't"} been read.`
@@ -126,6 +127,8 @@ const showErrorMsg = () => {
 		})
 	}
 }
+
+let formReadButtonStatus = document.querySelector('.form-read-status')
 
 formReadButton.addEventListener('click', () => {
 	formReadButton.checked
